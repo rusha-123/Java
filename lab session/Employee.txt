@@ -1,0 +1,49 @@
+package SwitchX;
+
+public class Employee {
+
+private int empid;
+
+		private String empname;
+
+		private String empdept;
+
+		Employee (int id, String name, String dept) {
+
+		empid=id;
+
+		empname=name;
+
+		empdept=dept;
+
+		System.out.println("Employee Id :"+id);
+
+		System.out.println("Employee name :"+name);
+
+		System.out.println("Employee department :"+dept);
+
+		}
+
+		Employee (int salary) {
+
+		System.out.println("Employee salary :"+salary);
+		}
+
+		Employee () {
+
+		String designation="Lecturer";
+
+		System.out.println("Eployee designation :"+designation);
+
+		}
+
+		public static void main(String[] args) {
+
+		Employee cons1= new Employee (104, "Rahul Patil", "Science");
+
+		Employee cons2= new Employee (40000);
+
+		Employee cons3= new Employee();
+
+}
+		}
