@@ -1,0 +1,55 @@
+class Student {
+
+private int id;
+
+private String name; private String course;
+
+public void setid() {
+
+id=12;
+
+}
+
+public void setname()
+
+name="Rushali";
+
+}
+
+public void setcourse() { course="Bsc.IT";
+
+}
+
+public int getid() {
+
+return id;
+
+}
+
+public String getname() {
+
+return name:
+
+}
+
+public String getcourse () {
+
+return course;
+
+public class Student Display{
+
+public static void main(String[] args) { Student st = new Student ();
+
+st.setid();
+
+st.setname();
+
+st.setcourse();
+
+System.out.println(st.getid());
+
+System.out.println(st.getname());
+
+System.out.println(st.getcourse());
+}
+}
