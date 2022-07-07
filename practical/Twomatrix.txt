@@ -1,0 +1,52 @@
+package java1;
+
+import java.util.Scanner;
+
+public class TwoMatrixArray {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int rows ,cols;
+		int rows1 , cols1;
+		System.out.println("how many rows");
+		rows = sc.nextInt();
+		System.out.println("how many columns");
+		cols = sc.nextInt();
+		int arr[][]= new int [rows][cols];
+		//int arr1[][]= new int [rows1][cols1];
+
+		
+		for(int i = 0; i<rows; i++) {
+			for(int j = 0; j<cols; j++) {
+				System.out.println("enter the valuer");
+				arr[i][j]=sc.nextInt();
+			}System.out.println();
+		}
+		for(int i=0;i<rows;i++) {
+			for(int j =0; j<cols; j++) {
+				System.out.print(arr[i][j] + " ");
+			}System.out.println();
+		}
+		System.out.println("second matrix");
+		System.out.println("how many rows");
+		rows1 = sc.nextInt();
+		System.out.println("how many columns");
+		cols1 = sc.nextInt();
+		{
+		for(int a = 0; a<rows1; a++) {
+			for(int b = 0; b<cols1; b++) {
+				System.out.println("enter the valuer");
+				arr[a][b]=sc.nextInt();
+			}System.out.println();
+		}
+		for(int a=0;a<rows1;a++) {
+			for(int b =0; b<cols1; b++) {
+				System.out.print(arr[a][b] + " ");
+			}System.out.println();
+		}
+		sc.close();
+		
+	}}
+
+
+	}
