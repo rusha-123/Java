@@ -1,0 +1,64 @@
+public class Employee {
+
+	long eId;
+	String eName;
+	String eAd;
+	long ePh;
+	double basicsalary;
+	double specialAllowance;
+	double hra;
+	
+	Employee(){
+		specialAllowance=230.80;
+		hra=1000.50;
+	}
+	
+	public Employee(long Id ,String Name ,String Add,long Ph,double salary){
+		eId=Id;
+		eName=Name;
+		eAd=Add;
+		ePh=Ph;
+		basicsalary=salary;
+	}
+	public static void calculateSalary() {
+		double basicsalary=15000;
+		double specialAllowance=230.80;
+		double hra=1000.50;
+		double salary = basicsalary + (basicsalary * specialAllowance/100) + basicsalary * hra/100;
+			System.out.println(salary);
+		}
+   
+   
+	class Manager extends Employee {
+		    public void display(){
+			eId=101;
+			eName="akshay";
+			eAd="badlapur";
+			ePh=929838;
+			basicsalary=20000;
+			
+		}
+	}
+	class Trainee extends Employee {
+		public void display(long Id ,String Name ,String Add,long Ph,double salary) {
+			eId=Id;
+			eName=Name;
+			eAd=Add;
+			ePh=Ph;
+			basicsalary=salary;
+		
+	}
+	}
+	public static void main(String[] args) {
+		Employee babu1 =new Employee();
+		System.out.println(babu1.specialAllowance +" "+ babu1.hra);
+		Employee babu =new Employee(101010,"lahoo","ghatkopar",93847974,15000);
+		System.out.println(babu.eId +" "+ babu.eName +" "+babu.eAd +" "+ babu.ePh +" "+ babu.basicsalary);
+		calculateSalary();
+//		Manager mg =new Manager();
+//		mg.display();
+		
+		
+
+	}
+	}
