@@ -1,0 +1,154 @@
+package com.Library;
+import java.sql.*;
+public class Practice {
+	public static void main(String[] args) throws SQLException   {
+	Connection con=null;
+	try {
+	Class.forName("com.mysql.cj.jdbc.Driver");
+	
+	
+	
+	con=DriverManager.getConnection("jdbc:mysql://localhost:3306/Anudip","root","#bhujbal10rushali");
+	
+	Statement stmt=con.createStatement();
+	//System.out.println("Inserting Values");
+
+			//String query="INSERT INTO employedata  VALUES(101,'Rushali','Bhujbal','21000', 'Finance')";
+			//String query="INSERT INTO employedata VALUES(102,'Rahul','Patil','20000','Webapp')";
+	         // String query="INSERT INTO employedata VALUES(103,'sayali','Patil','25000','Web develper')"; 
+	        //  String query="INSERT INTO employedata VALUES(104,'Akshy','More','30000','Finance')";
+	         // String query="INSERT INTO employedata VALUES(105,'Mahesh','Shinde','35000','Webapp')";
+	          //String query="INSERT INTO employedata VALUES(106,'Manish','Bhujbal','40000','Finance')";
+	          //String query="INSERT INTO employedata VALUES(107,'farzana','Shaikh','45000','Webapp')";
+	//String query="INSERT INTO employedata VALUES(108,'Hitesh','Patil','35000','Webapp')";
+	//String query="INSERT INTO employedata VALUES(109,'Lahoo','Chavan','45000','Finance')";
+	//String query="INSERT INTO employedata VALUES(110,'Sufiya','shahin','50000','Finance')";
+	
+			//stmt.execute(query);
+			
+			//ResultSet rs=stmt.executeQuery(query);
+			
+			
+	//String query ="CREATE TABLE employeData(id INTEGER PRIMARY KEY,"
+		//	+ " first_name CHAR(20), "+
+		//	+ " last_name CHAR(20),"
+			//+ " Salary Integer not null,"
+		//	+ " Department CHAR(20))";
+			
+			
+	// stmt.executeUpdate(query);
+	//System.out.println("record inserted");
+//	
+//
+//	String query ="select First_Name from Employedata where department = 'tech team'";
+//	Statement st = con.createStatement();
+//	ResultSet rs = st.executeQuery(query);
+//	while(rs.next()) {
+//	
+//	String name = rs.getString("First_Name");
+//	System.out.println(name);
+//	 String query ="select First_Name, last_name from Employedata where salary > 20000";
+//	Statement st = con.createStatement();
+//			ResultSet rs = st.executeQuery(query);
+//			while(rs.next()) {
+//			
+//			String name = rs.getString("First_Name" );
+//			String last_name = rs.getString("Last_Name");
+//			System.out.println(name +" "+ last_name);
+//			}
+//	String query ="select UPPER(First_Name) as Name from  Employedata";
+//	Statement st = con.createStatement();
+//	ResultSet rs = st.executeQuery(query);
+//	while(rs.next()) {
+//	
+//	String name = rs.getString("Name");
+//	
+//	System.out.println(name);
+//	}
+//	String query ="select SUBSTRING(First_Name, 1, 5) as Name from c";
+//	Statement st = con.createStatement();
+//	ResultSet rs = st.executeQuery(query);
+//	while(rs.next()) {
+//	
+//	String name = rs.getString("Name");
+//	
+//	System.out.println(name);
+//	}
+//	String query ="select RTRIM(First_Name)as Name from Employedata;";
+//	Statement st = con.createStatement();
+//	ResultSet rs = st.executeQuery(query);
+//	while(rs.next()) {
+//	
+//	String name = rs.getString("Name");
+//	
+//	System.out.println(name);
+//	}
+//	String query ="select LTRIM(First_Name)as Name from  Employedata;";
+//	Statement st = con.createStatement();
+//	ResultSet rs = st.executeQuery(query);
+//	while(rs.next()) {
+//	
+//	String name = rs.getString("Name");
+//	
+//	System.out.println(name);
+//	}
+//	String query ="SELECT  first_name, last_name  from Employedata where length(First_Name) = 4 and First_Name like '%n'";
+//	
+//	Statement st = con.createStatement();
+//	ResultSet rs = st.executeQuery(query);
+//	while(rs.next()) {
+//	
+//	String name = rs.getString("First_Name");
+//	String lastname = rs.getString("Last_Name");
+//	
+//	System.out.println(name + lastname);
+//	}
+//	String query ="select * from Employedata where salary between 20000 and 50000";
+//	Statement st = con.createStatement();
+//	ResultSet rs = st.executeQuery(query);
+//	while(rs.next()) {
+//	
+//	String name = rs.getString("First_Name");
+//
+//	
+//	System.out.println(name);
+	
+
+//String query ="select first_name from Employedata where first_name like '%hul';";
+//	Statement st = con.createStatement();
+//	ResultSet rs = st.executeQuery(query);
+//	while(rs.next()) {
+//	
+//	String name = rs.getString("First_Name");
+//
+//	
+//	System.out.println(name);
+	
+String query ="select * from Employedata order by salary desc";
+	Statement st = con.createStatement();
+	ResultSet rs = st.executeQuery(query);
+	while(rs.next()) {
+	
+	String name = rs.getString("salary");
+
+	
+	System.out.println(name);
+//	}
+//	}
+	}
+	}
+
+
+	catch(Exception e)
+	{
+		e.printStackTrace();
+	}
+	finally
+	{
+		con.close();
+		
+	}
+
+}
+}
+	
