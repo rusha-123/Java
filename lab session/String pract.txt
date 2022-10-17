@@ -1,0 +1,39 @@
+1). given a number of n for each integer i in the range of 1 to n print one value per line......
+1. if i is multiple of 3 & 5 print Good Morning.
+2. if i is a multiple of only 3 but not 5 print Good.
+3. if i is a multiple of only 5 but not 3 print Morning
+4. if i is not multiple of 3 or 5 then print the value of i.
+
+package Example;
+
+import java.util.Scanner;
+
+public class Basic {
+
+		
+	  public static void main(String[] args){
+		  
+	  System.out.println("Enter number");
+	  @SuppressWarnings("resource")
+	Scanner sc=new Scanner(System.in);
+	  int i=sc.nextInt();
+	 
+	  if(i%3==0 && i%5==0)
+	  {
+	   System.out.println("Good Morning");
+	  }
+	  else if(i%3==0)
+	  {
+	   System.out.println("Good");
+	  }
+	  else if(i%5==0)
+	  {
+		   System.out.println("Morning");
+	  }
+	  else
+	  {
+	   System.out.println(i);
+	  }
+	}
+  }
+	  

@@ -1,0 +1,33 @@
+2). given two string of lowercase english store it variable a & b 
+1.calculate  sum of length A & B
+2.Check wherther A is greater than B
+3. Capitaliz only firs letter of A&B print together
+
+
+package Example;
+
+
+
+public class BasicString {
+
+public static void main(String[] args) {
+		String s="rusha";
+		String b="bhujbal";
+		
+		
+		  System.out.println("The length is:"+ s.length());
+		 System.out.println("The length is:"+ b.length());
+	  System.out.println(s.equalsIgnoreCase(b));
+		  
+		  String[] arr=s.split(" ");
+		  
+		for(int i=0;i<arr.length;i++) {
+			char c=arr[i].charAt(0);
+			String c1=String.valueOf(c).toUpperCase() ;
+			String sub=arr[i].substring(1);
+			System.out.println(c1+sub);
+			 
+		}
+		  
+}
+}
